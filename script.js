@@ -17,4 +17,24 @@
 
 ////////////////////////////////// DOM HTML
 
-document.getElementById("im1").src= "./images/logo.png";
+// document.getElementById("im1").src= "./images/logo.png";
+
+
+////////////////////////////////// DOM animation
+
+function myMove(){
+    var elem = document.getElementById("animation");
+    var pos = 0;
+    var id = setInterval(frame, 5);
+
+    function frame(){
+        if(pos==350){
+            clearInterval(id);
+        }
+        else{
+            pos++;
+            elem.style.top = pos + "px";
+            elem.style.left = pos + "px";
+        }
+    }
+}
