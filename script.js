@@ -41,8 +41,41 @@
 
 ////////////////////////////////// DOM events
 
-function uppercase(){
-    var x = document.getElementById("name");
+// function uppercase(){
+//     var x = document.getElementById("name");
 
-   x.value =  x.value.toUpperCase();
+//    x.value =  x.value.toUpperCase();
+// }
+
+
+////////////////////////////////// DOM addeventslistener
+
+// document.getElementById("event").addEventListener("click",hello);
+
+// function hello(){
+//     alert("hbchasdbchjb a");
+// }
+
+// window.addEventListener("resize", myfunction);
+
+// function myfunction(){
+//     document.getElementById("demo").innerHTML= Math.random();
+// }
+
+var a =5;
+var b = 4;
+
+document.getElementById("btn").addEventListener("click", function(){
+    myfunction(a,b);
+})
+
+function myfunction(a,b){
+    var result= a*b;
+    document.getElementById("demo").innerHTML  = result;
+}
+
+function remove(){
+    document.getElementById("remove").removeEventListener("click", function(){
+        myfunction(a,b);
+    })
 }
